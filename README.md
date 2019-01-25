@@ -1,5 +1,7 @@
 # Zodiac
 
+[![Build Status](https://travis-ci.org/shavit/elixir-zodiac.svg?branch=master)](https://travis-ci.org/shavit/elixir-zodiac)
+
 Compatibility between Zodiac Signs
 
 
