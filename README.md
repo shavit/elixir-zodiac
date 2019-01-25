@@ -2,13 +2,12 @@
 
 [![Build Status](https://travis-ci.org/shavit/elixir-zodiac.svg?branch=master)](https://travis-ci.org/shavit/elixir-zodiac)
 
-Compatibility between Zodiac Signs
+Compatibility between Zodiac Signs. [Documentation](https://hex.pm/packages/zodiac)
 
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `zodiac` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `zodiac` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -18,6 +17,20 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/zodiac](https://hexdocs.pm/zodiac).
+## Usage
+
+
+Find compatibility for Leo
+```elixir
+iex> Sign.compatibility :leo
+[:sagittarius, :libra, :gemini, :aries]
+```
+
+Find compatibility by date
+```elixir
+iex> Zodiac.for_date ~D(1970-08-22)
+%Sign{
+  name: :leo,
+  compatible_with: [:sagittarius, :libra, :gemini, :aries]
+}
+```

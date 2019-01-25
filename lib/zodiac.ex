@@ -46,6 +46,11 @@ defmodule Zodiac do
 
     @doc """
     Get a list of compatible signs
+
+    ## Examples
+
+      iex> Sign.compatibility :capricorn
+      [:pisces, :scorpio, :virgo, :taurus]
     """
     @spec compatibility(sign_name) :: list(sign_name)
     def compatibility(name) do
@@ -96,8 +101,8 @@ defmodule Zodiac do
 
     ## Examples
 
-        iex> Zodiac.for_date(~D(1970-12-20))
-        %Zodiac.Sign{compatible_with: [:leo, :aries, :aquarius, :libra], date_range: {{11, 22}, {12, 21}}, name: :sagittarius}
+      iex> Zodiac.for_date(~D(1970-12-20))
+      %Zodiac.Sign{compatible_with: [:leo, :aries, :aquarius, :libra], date_range: {{11, 22}, {12, 21}}, name: :sagittarius}
 
   """
   @spec for_date(Date.t) :: Sign.t

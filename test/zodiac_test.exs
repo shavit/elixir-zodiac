@@ -37,6 +37,10 @@ defmodule ZodiacTest do
 
   describe "zodiac sign" do
 
+    test "compatibility/1 returns a list of matched signs" do
+      assert [:pisces, :scorpio, :virgo, :taurus] == Sign.compatibility :capricorn
+    end
+
     test "get_date_range/1 returns the dates for a sign" do
       assert {{12, 22}, {1, 19}} = Sign.get_date_range :capricorn
       assert {{1, 20}, {2, 18}} = Sign.get_date_range :aquarius
